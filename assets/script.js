@@ -51,7 +51,14 @@ newEvent.on('click', function(e) {
 });
 
 
+init();
 
-// function checkForEvents() {
-//     var 
-// }
+function init() {
+    for (var i = 9; i < 18; i++) {
+    var rowClassName = "row" + i.toString();
+    console.log(localStorage.getItem(rowClassName));
+
+    var inputEl = $('input.' + rowClassName)[0];
+    inputEl.value = localStorage.getItem(rowClassName);
+    }
+};
